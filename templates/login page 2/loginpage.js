@@ -6,6 +6,9 @@ document.querySelector("button").addEventListener("click",function(){
     if(check(password)==true&&checkgmail(username)){
         window.open("./homepage.html");
     }
+    else{
+        alert("wrong id or password");
+    }
 })
 
 function checkgmail(mail)

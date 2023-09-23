@@ -1,1 +1,1 @@
-"# first-ai-model" 
+"# codefury 3.0 project " 
