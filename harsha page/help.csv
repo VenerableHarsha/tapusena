@@ -1,0 +1,13 @@
+Psychologist Type,Name,Age,Gender,Ethnicity,Religion,NGO,Hobbies,target
+Community Psychologist,Rahul Khanna,34,Male,Indian,Hindu,"Harmony Minds Foundation","Organizing community workshops, mental health advocacy, rural volunteering","gender"
+Community Psychologist,Sara Cohen,29,Female,Israeli,Jewish,"Unity in Communities","Promoting unity among diverse communities, cultural exchange programs, mental health support","ethnicity"
+Health Psychologist,Ayushi Malhotra,36,Female,Indian,Sikh,"Healthy Living Foundation","Promoting healthy lifestyles, stress management research, wellness retreats","other_cyberbullying"
+Health Psychologist,David Williams,31,Male,American,Christian,"Mind-Body Connection","Mindfulness and meditation, holistic health, wellness programs","age"
+School Psychologist,Krishna Patel,40,Male,Indian,Hindu,"ChildFirst Education","Creating a safe school environment, mentoring students, educational psychology","other_cyberbullying"
+School Psychologist,Mia Rodriguez,35,Female,Spanish Catholic,"Education Empowerment","School counseling, student empowerment, psychological support","gender"
+Sexual Harassment Psychologist,Ahmed Khan,32,Male,Pakistani,Muslim,"Empowerment Alliance","Gender equality advocacy, consent workshops, empowerment programs","religion"
+Sexual Harassment Psychologist,Leila Ahmed,38,Female,Egyptian,Muslim,"Justice and Dignity Foundation","Addressing sexual harassment, legal advocacy, victim support","ethnicity"
+Forensic Psychologist,Aditya Verma,45,Male,Indian,Hindu,"Justice Seekers Foundation","Criminal profiling, forensic assessments, solving complex cases","age"
+Forensic Psychologist,Isabella Russo,39,Female,Italian,Catholic,"Forensic Insights","Criminal behavior research, court testimony, psychological analysis","religion"
+Community Psychologist,Priya Choudhury,36,Female,Bengali,Hindu,"Community Harmony Initiative","Promoting mental well-being, organizing support groups, cultural events, mental health advocacy","ethnicity"
+Health Psychologist,Alex Johnson,32,Non-binary,American,None,"Wellness World Foundation","Mindfulness-based interventions, meditation sessions, holistic health research, outdoor activities","not_cyberbullying"
