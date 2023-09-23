@@ -49,7 +49,7 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     tweet = request.form['tweet']
-    result = npredict(tweet,loglikelihood,-2.122046523535116)
+    result = npredict(loglikelihood,-2.122046523535116,tweet)
     return render_template('index.html', prediction_result=result)
 
 def npredict(loglikelihood,logprior,tweet="niggers are cotton pickers"):
