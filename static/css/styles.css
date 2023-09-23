@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: Noto Sans Mono, monospace;}
+
+h1{ //width: 10%;
+    font-size: 5em;
+    margin: 0 auto;
+    line-height: 2em;
+    text-align: center;
+
+    color: #66BFBF;
+    //font-size: 50px;}
+
+.skill-row{
+     width: 50%;
+     margin: 100px auto 100px auto;
+
+     text-align: left;
+     line-height: 2;}
+
+h2{
+   color: #66BFBF;}
+.top-container {
+    background-color: #ADD8E6;
+    padding-top: 100px;
+    //width: 1500px;
+    height: 600px;
+    //top: 0px;
+    //border: solid 10px;}
+
+.krish{
+    width: 25%;
+    margin: 20px auto;
+    //padding: 1em;
+    float:left;
+    //overflow: hidden;
+    //perspective: 20px;
+    //border-radius: 50%;}
+
+hr.style-one{
+    border-style: dotted;
+    width: 50%}
+.skills{
+    margin:100px;
+   }
+
+.skill-vector{float:right;
+margin: auto auto 50px auto;}
+
+//.skill-row{
+    text-align: right;
+    margin: 100px 0px auto auto;}
+
+.initialdesc{
+    text-align:left;
+    margin: 50px auto 50px auto;
+    //float:right;}
+
+.top-cloud {
+     position: absolute;
+     right:300px;
+     bottom: 620px}
+
+.bottom-cloud {
+     position: absolute;
+     left:200px;}
+
+.pro{ text-decoration: underline;}
+
+.mountain{position:absolute;
+              left: 450px;
+              bottom:0px;}
+
+//.middle-container{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    display: inline-block;
+    position: relative;
+
+    //margin-left: 220px;
+    //border: solid 20px;
+    }
+
+//.bottom-container{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    display: inline-block;
+    position: relative;
+    margin-left: 460px;
+    border: solid 10px;}
