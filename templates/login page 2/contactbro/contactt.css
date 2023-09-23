@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.contact-p {
+    background: #fff;
+    display: flex;
+    margin: 80px 0;
+
+}
+
+.contact-c {
+    display: flex;
+    flex: 1;
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.75);
+}
+
+.c1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://res.cloudinary.com/dkp9p8w5a/image/upload/v1695492695/peace-mind_j9jbhh.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.c1 p {
+    padding-left: 20%;
+    font-size: 20px;
+    text-shadow: 0px 0px 2px #000;
+}
+
+.c1 p span {
+    font-size: 16px;
+    color: #9df2fd;
+}
+
+.c2 {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inside-contact {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#btn_send {
+    height: 30px;
+}
+
+.inside-contact h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.inside-contact h3 {
+    text-align: center;
+    font-size: 16px;
+    color: #0085e2;
+    border-radius: 10px;
+}
+
+.inside-contact input,
+.inside-contact textarea {
+    width: 100%;
+    background-color: #eee;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 20px;
+}
+
+.inside-contact input[type=submit] {
+    background-color: #000;
+    color: #fff;
+    transition: 0.2s;
+    border: 2px solid #000;
+    margin: 30px 0;
+    border-radius: 10px;
+    height: 20px;
+}
+
+.inside-contact input[type=submit]:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.2s;
+    border-radius: 10px;
+    height: 20px;
+}
+
+@media screen and (max-width:991px) {
+    .contact-p {
+        display: block;
+        width: 100%;
+    }
+
+    .c1 {
+        display: none;
+    }
+
+    .c2 {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("https://cdn.pixabay.com/photo/2019/06/28/00/17/architecture-4303279_1280.jpg");
+        background-size: cover;
+    }
+
+    .inside-contact input,
+    .inside-contact textarea {
+        background-color: #fff;
+    }
+}

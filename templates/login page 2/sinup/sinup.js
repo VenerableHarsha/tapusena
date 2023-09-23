@@ -26,14 +26,28 @@ document.querySelector("button").addEventListener("click",function()
 })
 function checkphone(number)
 {
-    if(number.length!=10)
+    var count=0;
+    if(number.length==10)
     {
-        return false;
+        for(var i=0;i<number.length;i++)
+        {
+            if(number[i]>='0'&&number[i]<='9')
+            {
+                count++;
+            }
+        }
+        if(count==10)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     else{
-        return true;
+        return false;
     }
-
+    
 }
 function checkpass(newpass,oldpass)
 {
