@@ -37,14 +37,14 @@ def process_text(text):
     words = text.split()
     return [lemmatize_word(word) for word in words]
 
-df = pd.read_csv("C:\\Users\\harsh\\OneDrive\\Documents\\tp1\\tapusena\\cyberbullying\\harras.csv")
+df = pd.read_csv("/Users/krishhashia/PycharmProjects/css_mysite/cyberbullying/harras.csv")
 loglikelihood = df.set_index('text')['loglikelihood'].to_dict()
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', prediction_result='')
+    return render_template('', prediction_result='')
 
 @app.route('/predict', methods=['POST'])
 def predict():
