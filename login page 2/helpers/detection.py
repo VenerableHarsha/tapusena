@@ -10,7 +10,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('tapusena\\login page 2\\helpers\\index12.html')
+    return render_template('tapusena/login page 2/registerrr/blah.html')
+
 
 @app.route('/filtered-data', methods=['POST'])
 def filtered_data():

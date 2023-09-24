@@ -52,8 +52,9 @@ function sendUserInputToFlask(userInput) {
       });
 }
 
-// Function to display the filtered data received from the server
-function displayFilteredData(data) {
-  // Add code to display the filtered data as needed
-  console.log(data); // Example: Log the data to the console
+function redirectToIndex12WithData(data) {
+
+  var index12Url = "tapusena/login%20page%202/helpers/index12.html?data=" + encodeURIComponent(JSON.stringify(data));
+  
+  window.location.href = index12Url;
 }
