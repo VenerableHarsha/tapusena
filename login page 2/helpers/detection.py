@@ -6,11 +6,11 @@ from flask import Flask, render_template, jsonify, request
 
 app = Flask(__name__)
 
-
+data = pd.read_csv('help.csv')
 
 @app.route('/')
 def index():
-    return render_template('tapusena/login page 2/registerrr/blah.html')
+    return render_template('tapusena/templates/log_in_page/registerrr/blah.html')
 
 
 @app.route('/filtered-data', methods=['POST'])
@@ -94,4 +94,4 @@ def filtered_data():
     return jsonify(rows_to_display)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
