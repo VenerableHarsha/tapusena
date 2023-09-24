@@ -37,14 +37,14 @@ def process_text(text):
     words = text.split()
     return [lemmatize_word(word) for word in words]
 
-df = pd.read_csv("/Users/krishhashia/PycharmProjects/css_mysite/cyberbullying/harras.csv")
+df = pd.read_csv("/Users/krishhashia/PycharmProjects/css_mysite/harras.csv")
 loglikelihood = df.set_index('text')['loglikelihood'].to_dict()
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
-    return render_template('', prediction_result='')
+    return render_template('log_in_page/sinup/homepage.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -52,7 +52,7 @@ def predict():
     result = npredict(loglikelihood,-2.122046523535116,tweet)
     return render_template('index.html', prediction_result=result)
 
-def npredict(loglikelihood,logprior,tweet="niggers are cotton pickers"):
+def npredict(loglikelihood,logprior,tweet="i was beaten up"):
     word_l = process_text(tweet)
     p = logprior
     for word in word_l:
@@ -67,4 +67,4 @@ def npredict(loglikelihood,logprior,tweet="niggers are cotton pickers"):
     return (m,n)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
