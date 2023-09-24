@@ -52,7 +52,7 @@ def predict():
     result = npredict(loglikelihood,-2.122046523535116,tweet)
     return render_template('index.html', prediction_result=result)
 
-def npredict(loglikelihood,logprior,tweet="niggers are cotton pickers"):
+def npredict(loglikelihood,logprior,tweet="i was beaten up"):
     word_l = process_text(tweet)
     p = logprior
     for word in word_l:
