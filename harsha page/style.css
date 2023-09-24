@@ -1,0 +1,49 @@
+/* Common Styles for Both Themes */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333; /* Dark background for header */
+    color: #fff; /* Light text on dark background */
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Dark Theme Styles */
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-theme table, .dark-theme th, .dark-theme td {
+    border-color: #666;
+}
+
+/* Light Theme Styles */
+.light-theme {
+    background-color: #fff;
+    color: #333;
+}
+
+.light-theme table, .light-theme th, .light-theme td {
+    border-color: #ccc;
+}
