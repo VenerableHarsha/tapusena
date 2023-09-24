@@ -108,14 +108,14 @@ def lemmatize_word(word):
     tokens = word_tokenize(word)
     tokens = [word for word in tokens if word.lower() not in stop_words]
     pos_tags = pos_tag(tokens)
-    pos_tag_word = pos_tags[0][1]
+    pos_tag_word = pos_tags
     pos_map = {
         'N': 'n',  # Noun
         'V': 'v',  # Verb
         'R': 'r',  # Adverb
         'J': 'a'   # Adjective
     }
-    pos = pos_map.get(pos_tag_word[0], 'n')
+    pos = pos_map.get(pos_tag_word, 'n')
     lemma = l.lemmatize(word, pos=pos)
     return lemma
 
@@ -129,7 +129,8 @@ def process_text(text):
     text = text.lower()
     text = remove_punctuation(text)
     words = text.split()
-    return [lemmatize_word(word) for word in words]
+    return words
+    # return [lemmatize_word(word) for word in words]
 
 df = pd.read_csv("/Users/krishhashia/PycharmProjects/css_mysite/harras.csv")
 loglikelihood = df.set_index('text')['loglikelihood'].to_dict()
@@ -142,7 +143,7 @@ def index():
 
 @app.route('/index.html', methods=['GET'])
 def predict():
-    tweet = request.form['tweet']
+    tweet = "i was beaten up badly and tortured a lot"
     result = npredict(loglikelihood,-2.122046523535116,tweet)
     return render_template('/index.html', prediction_result=result)
 
