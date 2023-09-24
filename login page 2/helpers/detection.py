@@ -6,24 +6,24 @@ from flask import Flask, render_template, jsonify, request
 
 app = Flask(__name__)
 
-# Your existing Python code to compute the cosine similarity goes here
+
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('tapusena\\login page 2\\helpers\\index12.html')
 
 @app.route('/filtered-data', methods=['POST'])
 def filtered_data():
     if request.method == 'POST':
-        # Check if the request has form data named 'experience'
+        
         user_experience = request.form.get('experience')
 
         if user_experience:
             # Read the CSV file
-            dhelp = pd.read_csv("tapusena\\harsha page\\help.csv")
+            dhelp = pd.read_csv("tapusena\\helpers\\help.csv")
 
-            # Compute the cosine similarity based on user input
-            df = pd.read_csv("tapusena\\harsha page\\cyberbullying_tweets.csv")
+            
+            df = pd.read_csv("tapusena\\helpers\\cyberbullying_tweets.csv")
             x = df["tweet_text"]
 
             y_words = user_experience.split()
@@ -54,17 +54,17 @@ def filtered_data():
             result = sorted(result)
             target_condition = result[:1][0]
 
-            # Filter rows based on the "target" condition
+            
             filtered_rows = dhelp[dhelp["target"] == target_condition]
 
-            # Convert the filtered DataFrame to a list of dictionaries
+           
             rows_to_display = filtered_rows.to_dict(orient='records')
 
             return jsonify(rows_to_display)
 
-    # Default response (predefined data)
+    
     rows_to_display = [
-        # Data for the first row
+        
         {
             "Psychologist Type": "Health Psychologist",
             "Name": "David Williams",
@@ -76,7 +76,7 @@ def filtered_data():
             "Hobbies": "Mindfulness and meditation, holistic health, wellness programs",
             "target": "age"
         },
-        # Data for the second row
+        
         {
             "Psychologist Type": "Forensic Psychologist",
             "Name": "Aditya Verma",
