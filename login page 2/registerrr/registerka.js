@@ -1,42 +1,59 @@
-document.querySelector("form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the default form submission behavior
-  
-    // Get the user's input from the <textarea> with ID "id2"
-    var userExperience = document.getElementById("id2").value;
-  
-    // Send the user's input to the Flask route using AJAX
-    fetch("/filtered-data", {
+// Your original code for handling form submission
+document.querySelector("input").addEventListener("click", function () {
+  var hobbies = document.getElementById("id1").value;
+  var harass = document.getElementById("id2").value;
+  if (checkfam(hobbies) == true && checkharas(harass) == true) {
+      alert("Your message has been received");
+      // Add the code to send user input to the Flask route here
+      sendUserInputToFlask(harass); // Pass the 'harass' variable to the function
+  } else {
+      alert("Please fill both the boxes");
+  }
+});
+
+function checkfam(context) {
+  if (context.length != 0) {
+      return true;
+  } else {
+      return false;
+  }
+}
+
+function checkharas(context) {
+  if (context.length != 0) {
+      return true;
+  } else {
+      return false;
+  }
+}
+
+// New function to send user input to Flask using AJAX
+function sendUserInputToFlask(userInput) {
+  fetch("/filtered-data", {
       method: "POST",
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded", // Set the content type
+          "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: "experience=" + encodeURIComponent(userExperience), // Encode the input data
-    })
+      body: "experience=" + encodeURIComponent(userInput),
+  })
       .then(function (response) {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error("Server response was not ok.");
-        }
+          if (response.ok) {
+              return response.json();
+          } else {
+              throw new Error("Server response was not ok.");
+          }
       })
       .then(function (data) {
-        // Handle the response from the server (data) as needed
-        displayFilteredData(data); // Call a function to display the filtered data
+          // Handle the response from the server (data) as needed
+          displayFilteredData(data); // Call a function to display the filtered data
       })
       .catch(function (error) {
-        console.error("Error:", error);
+          console.error("Error:", error);
       });
-  });
-  
-  // Function to display the filtered data received from the server
-  function displayFilteredData(data) {
-    var ul = document.getElementById("filteredData");
-    ul.innerHTML = ""; // Clear any previous data
-  
-    data.forEach(function (item) {
-      var li = document.createElement("li");
-      li.textContent = "Psychologist Type: " + item["Psychologist Type"] + ", Name: " + item["Name"];
-      ul.appendChild(li);
-    });
-  }
-  
+}
+
+// Function to display the filtered data received from the server
+function displayFilteredData(data) {
+  // Add code to display the filtered data as needed
+  console.log(data); // Example: Log the data to the console
+}
