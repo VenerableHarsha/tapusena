@@ -7,7 +7,13 @@ from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
 
 # data = pd.read_csv('login page 2/helpers/help.csv')
-
+# TODO: fix the broken flask-jinja links and improve aesthetics of website
+# TODO: refer patients based on cyber bullying score, patients with higher score are referred on priority basis and
+# TODO: appropriate authorities are alerted
+# TODO: collect user information in database- CRUD operations
+# TODO: add location trackers and security measures such as sha-256 to protect user privacy
+# TODO: fix linking in website
+# TODO: remove redundant pages
 @app.route('/blah.html')
 def index():
     return render_template("/blah.html")
@@ -140,6 +146,11 @@ app = Flask(__name__, template_folder='templates')
 @app.route('/')
 def index():
     return render_template('/homepage.html')
+
+
+@app.route("/register.html")
+def register():
+    return render_template("/blah.html")
 
 @app.route('/index.html', methods=['GET'])
 def predict():
